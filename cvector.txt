@@ -1,0 +1,64 @@
+typedef struct int_array_s
+{
+    int* contents;
+    int size; // 5 arrayin kapasitesi
+	int count; //0 arraydeki eleman sayisi
+}intArray;
+
+intArray a=arrCreate(5) // count=0
+
+intArrayAppend(a,7)
+intArrayremove(a,0,3)
+int intArrayinsert(a,3,47) 
+intArrayGet(a,0)
+intArraySet(a,1,27)
+
+
+
+// int Arraya gelen eleman eklenecek. gelen deger count pozisyonuna konulacak ve count 1 arttirilacak
+// eger array dolmus ise array size i 2 katina cikarilacak (mevcut elemanlarin korunmasi saglanacak)
+int intArrayAppend(intArray* a, int value) {
+
+}
+
+// int Arraya paramentre olarak gelen index teki elemanin onune parametre olarak gelen value eklenecek. 
+// index ve sonrasindaki elemanlar bir saga kaydirilmali ve gelen value oyle konulmali
+// count ekleme sonunda 1 artmali.
+//  eger array dolmus ise array size i 2 katina cikarilacak (mevcut elemanlarin korunmasi saglanacak)
+int intArrayInsert(intArray* a, int index int value) {
+
+}
+
+
+// int Arraydan parametre olarak gelen indexteki eleman cikartilacak. cikartilan pozisyondaki elemanin solunda kalan
+// elemanlar bir sola kaydirilacak. count 1 azaltilacak. Eger arraydeki eleman sayisi(count) Size in yarisindan kucuk
+// ise contents arrayinin size i yariya dusurulecek(mevcut elemanlarin korunmasi saglanacak)
+int intArrayremoveAt(intArray* a, int index) {
+
+}
+
+// intArraydan parametre olarak gelen deger bulunup cikartilacak(sadece ilk rastlanan). cikartilan pozisyondaki elemanin solunda kalan
+// elemanlar bir sola kaydirilacak. count 1 azaltilacak. Eger arraydeki eleman sayisi(count) Size in yarisindan kucuk
+// ise contents arrayinin size i yariya dusurulecek(mevcut elemanlarin korunmasi saglanacak)
+int intArrayremove(intArray* a, int value) {
+
+}
+
+// intArraydeki paramentre olarak gelen indexteki elemanin degeri parametre olarak gelen value ya konulacak
+// eger index gecersiz ise yani index<0 veya index>=count ise  geriye 0 donecek. gecerli ise 1
+int intArrayGet(intArray* a, int index, int* value) {
+
+}
+
+// intArraydeki paramentre olarak gelen indexteki elemanin adres geriye dondurulecek
+// eger index gecersiz ise yani index<0 veya index>=count ise  geriye NULL donecek. gecerli ise  elemanin adresi donecek
+int* intArrayGetRef(intArray* a, int index) {
+
+}
+
+// intArraydeki paramentre olarak gelen indexteki elemanin bulundugu konuma parametre olarak gelen value
+// konulacak
+// eger index gecersiz ise yani index<0 veya index>=count ise  geriye 0 donecek. gecerli ise  1  donecek
+int intArraySet(intArray* a, int index, int value) {
+
+}
